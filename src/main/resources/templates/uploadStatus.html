@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1>Exams Created Successfully</h1>
+
+<div th:if="${message}">
+	<h2 th:text="${message}"/>
+</div>
+
+<th:block th:each="exam : ${exams}">
+	<a th:href="${exam.downloadUrl}" target="_blank" th:text="${exam.id}"></a><br/>
+</th:block>
+
+
+</body>
+</html>

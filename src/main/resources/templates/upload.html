@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1>Please Upload Questions Pool Sheet</h1>
+
+<form method="POST" action="/upload" enctype="multipart/form-data">
+	<input type="file" name="file"/><br/><br/>
+	Number of Exams Needed: <input type="number" name="ExamsNumber"/><br/><br/>
+	Multi Choices: <input type="number" name="multiChoice"/><br/><br/>
+	True and False: <input type="number" name="trueFalse"/><br/><br/>
+	Articles: <input type="number" name="articles"/><br/><br/>
+	<input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

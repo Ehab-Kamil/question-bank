@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1>Exam Template</h1>
+
+
+<div th:if="${exam}">
+	<h2 th:text="${exam.id}"/>
+
+	<p th:text="${exam.categories}"/>
+
+
+</div>
+
+</body>
+</html>
