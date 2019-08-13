@@ -24,17 +24,42 @@
 						Exams Generator
 					</span>
 
-
-				<div th:if="${message}">
-					<h2 th:text="${message}"/>
+				<div class="wrap-input100 validate-input" data-validate="Select Excel Sheet">
+					<input class="input100" type="file" name="file"/>
+					<span class="focus-input100" data-placeholder="&#xf207;"></span>
 				</div>
 
-				<div class="text-center p-t-90">
-					<th:block th:each="exam : ${exams}">
-						<a class="txt1" th:href="${exam.downloadUrl}" target="_blank" th:text="${'Exam '+exam.id}"></a><br/>
-					</th:block>
+				<div class="wrap-input100 validate-input" data-validate="Must Have Value">
+					<input class="input100" type="number" name="ExamsNumber" placeholder="Number of Templates"/>
+					<span class="focus-input100" data-placeholder="&#xf207;"></span>
 				</div>
 
+				<div class="wrap-input100 validate-input" data-validate="Must Have Value">
+					<input class="input100" type="number" name="multiChoice" placeholder="Multi Choices"/>
+					<span class="focus-input100" data-placeholder="&#xf207;"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Must Have Value">
+					<input class="input100" type="number" name="trueFalse" placeholder="True or False"/>
+					<span class="focus-input100" data-placeholder="&#xf207;"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Must Have Value">
+					<input class="input100" type="number" name="articles" placeholder="Article"/>
+					<span class="focus-input100" data-placeholder="&#xf207;"></span>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn">
+						<input type="submit" value="Submit"/>
+					</button>
+				</div>
+
+				<div class="text-center p-t-10">
+					<a class="txt1" href="#">
+						Copyrights @Ehab Kamil
+					</a>
+				</div>
 			</form>
 		</div>
 	</div>

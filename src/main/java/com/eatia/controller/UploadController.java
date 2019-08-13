@@ -25,7 +25,7 @@ public class UploadController {
 	public String index(Model model) {
 		ExamTemplateConfiguration configuration = new ExamTemplateConfiguration();
 		model.addAttribute("examConfiguration", configuration);
-		return "upload";
+		return "index";
 	}
 
 	@PostMapping("/upload")
