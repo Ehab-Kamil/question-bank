@@ -2,14 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<h1>Exam Template</h1>
-
-
 <div th:if="${exam}">
-	<h2 th:text="${exam.id}"/>
+	<h2 th:text="${'Exam : '+exam.id}"/>
 
-	<p th:text="${exam.categories}"/>
+	<table>
+		<tr th:each="category : ${exam.categories}">
+			<td>
+				<table>
+					<tr th:each="question : ${category.getQuestions()}">
+						<td th:text="${question.data}"/>
+					</tr>
+				</table>
 
+			</td>
+		</tr>
+	</table>
 
 </div>
 
